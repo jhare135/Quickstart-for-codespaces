@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Expense Charts</title>
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .chart-container {
+        text-align: center;
+        margin: 30px 0;
+      }
+      .chart-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #fff;
+      }
+      .chart-image {
+        max-width: 100%;
+        height: auto;
+        border: 8px solid #fff;
+        margin: 20px 0;
+      }
+      .instructions {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>💰 My Expense Analysis</h1>
+    
+    <div class="instructions">
+      <h2>📊 How to Generate Your Charts</h2>
+      <p>1. Open terminal in VS Code</p>
+      <p>2. Run: <code>cd python && python expense_tracker.py</code></p>
+      <p>3. Add some expenses and generate charts</p>
+      <p>4. Refresh this page to see your results!</p>
+    </div>
+    
+    <div class="chart-container">
+      <h2 class="chart-title">Expense Analysis Dashboard</h2>
+      <img class="chart-image" src="/charts/expense_analysis.png" 
+           alt="Expense Analysis" 
+           onerror="this.style.display='none'; document.getElementById('no-chart1').style.display='block';">
+      <div id="no-chart1" style="display:none; color: #ccc; font-style: italic;">
+        Chart will appear here after running the Python script
+      </div>
+    </div>
+    
+    <div class="chart-container">
+      <h2 class="chart-title">Expense Statistics</h2>
+      <img class="chart-image" src="/charts/expense_stats.png" 
+           alt="Expense Statistics"
+           onerror="this.style.display='none'; document.getElementById('no-chart2').style.display='block';">
+      <div id="no-chart2" style="display:none; color: #ccc; font-style: italic;">
+        Chart will appear here after running the Python script
+      </div>
+    </div>
+  </body>
+</html>
